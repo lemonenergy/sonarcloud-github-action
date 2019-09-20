@@ -1,6 +1,6 @@
 FROM openjdk:11-jre-slim
 
-LABEL version="0.0.1"
+LABEL version="1.2.0"
 LABEL repository="https://github.com/sonarsource/sonarcloud-github-action"
 LABEL homepage="https://github.com/sonarsource/sonarcloud-github-action"
 LABEL maintainer="SonarSource"
