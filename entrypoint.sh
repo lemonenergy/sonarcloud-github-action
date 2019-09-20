@@ -17,7 +17,7 @@ if [[ -f "build.gradle" ]]; then
   exit 1
 fi
 
-if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
+if [[ -z "${SCAN_PULL_REQUEST}" || "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
   EVENT_ACTION=$(jq -r ".action" "${GITHUB_EVENT_PATH}")
   if [[ "${EVENT_ACTION}" != "opened" ]]; then
 	  echo "No need to run analysis. It is already triggered by the push event."
