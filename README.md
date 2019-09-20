@@ -46,6 +46,10 @@ jobs:
 
 - `SONAR_TOKEN` – **Required** this is the token used to authenticate access to SonarCloud. You can generate a token on your [Security page in SonarCloud](https://sonarcloud.io/account/security/). You can set the `SONAR_TOKEN` environment variable in the "Secrets" settings page of your repository.
 
+### Environment variables
+
+- `SCAN_PULL_REQUEST` – **Optional** Flag to run analysis on `pull_request` events. Scans on pull requests are disabled by default as the action expects to be triggered by push events. 
+
 ## Example of pull request analysis
 
 <img src="./images/SonarCloud-analysis-in-Checks.png">
